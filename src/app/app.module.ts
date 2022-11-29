@@ -9,6 +9,11 @@ import { CategorieComponent } from './components/categorie/categorie.component';
 import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {laboComponent} from "./components/labo/labo.component";
+import {AppRoutingModule} from "./app-routing.module";
+import {LaboService} from "./services/labo.service";
+import {UtilisateurService} from "./services/utilisateur.service";
+import {FamilleService} from "./services/famille.service";
+import {FactureService} from "./services/facture.service";
 
 
 
@@ -22,15 +27,22 @@ import {laboComponent} from "./components/labo/labo.component";
     CategorieComponent,
     UserComponent,
     DashboardComponent,
-      laboComponent
+    laboComponent
 
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+      LaboService,
+      UtilisateurService,
+      FamilleService,
+      FactureService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
