@@ -9,6 +9,10 @@ export class UserComponent {
   //hello
   //hiiiii
 
+  constructor() {
+  }
 
 
 }
+
+

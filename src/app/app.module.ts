@@ -8,6 +8,7 @@ import { FournisseurComponent } from './components/fournisseur/fournisseur.compo
 import { CategorieComponent } from './components/categorie/categorie.component';
 import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {laboComponent} from "./components/labo/labo.component";
 
 
 
@@ -20,7 +21,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FournisseurComponent,
     CategorieComponent,
     UserComponent,
-    DashboardComponent
+    DashboardComponent,
+      laboComponent
+
   ],
   imports: [
     BrowserModule,
