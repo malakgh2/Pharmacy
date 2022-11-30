@@ -10,12 +10,23 @@ import {LaboService} from "./services/labo.service";
 })
 export class AppComponent implements OnInit {
   title = 'projetfront';
-  labo: Array<Laboratoire> = new Array<Laboratoire>();
-  constructor(private laboService: LaboService) {
+
+  public labos: Laboratoire[] = [];
+
+    constructor(private laboService: LaboService) { }
+
+  public getLabos(): void {
+    this.laboService.getAll().subscribe((response: Laboratoire[]) => {
+      this.labos = response;
+    }, (error: Laboratoire[]) => {
+      this.labos = error;
+    });
   }
-  ngOnInit() {
-    this.labo = this.laboService.getAll();
+
+    ngOnInit(): void {
+    this.getLabos();
   }
+
 
 
 }

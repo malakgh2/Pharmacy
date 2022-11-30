@@ -14,6 +14,7 @@ import {LaboService} from "./services/labo.service";
 import {UtilisateurService} from "./services/utilisateur.service";
 import {FamilleService} from "./services/famille.service";
 import {FactureService} from "./services/facture.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -34,7 +35,8 @@ import {FactureService} from "./services/facture.service";
     BrowserModule,
     RouterOutlet,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
       LaboService,

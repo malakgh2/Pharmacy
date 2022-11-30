@@ -1,2 +1,6 @@
-<app-fournisseur></app-fournisseur>
-<router-outlet></router-outlet>
+<h2>Liste des personnes</h2>
+<ul>
+    <li *ngFor="let elt of labos">
+        {{ elt.lib_lab }} {{elt.id_lab}}
+    </li>
+</ul>
