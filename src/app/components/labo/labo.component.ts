@@ -35,6 +35,8 @@ export class laboComponent implements OnInit {
     }, (error: Laboratoire[]) => {
       this.labos = error;
     });
+    this.laboFormGroup.reset();
+
   }
   public handleDeleteLabo(): void {
 
@@ -44,6 +46,8 @@ export class laboComponent implements OnInit {
     }, (error: void) => {
       console.log(error);
     });
+    this.laboFormGroup.reset();
+
   }
 
 
@@ -56,6 +60,8 @@ export class laboComponent implements OnInit {
     }, (error: void) => {
       console.log(error);
     });
+    this.laboFormGroup.reset();
+
 
   }
 
@@ -68,6 +74,7 @@ export class laboComponent implements OnInit {
     }, (error: void) => {
       console.log(error);
     });
+    this.laboFormGroup.reset();
   }
 
 

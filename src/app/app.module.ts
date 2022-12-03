@@ -28,7 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
     CategorieComponent,
     UserComponent,
     DashboardComponent,
-    laboComponent
+    laboComponent,
 
   ],
   imports: [
