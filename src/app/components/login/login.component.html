@@ -11,27 +11,28 @@
   </div>
 
   <div class="signup">
-    <form>
+    <form [formGroup]="userFormGroup" (ngSubmit)="callingFunction()">
       <label for="chk" aria-hidden="true">Register</label>
-      <input type="text" name="txt" placeholder="Name" required="">
-      <input type="text" name="txt" placeholder="Surname" required="">
-      <input type="text" name="txt" placeholder="Adress" required="">
-      <input type="email" name="email" placeholder="Email" required="">
-      <input type="text" name="txt" placeholder="Zip Code" required="">
-      <input type="date" id="birthday" name="birthday" required="">
-      <button id="btn-signup" >Sign up</button>
+      <input type="text" name="txt" placeholder="Name" required=""formControlName="user_firstname">
+      <input type="text" name="txt" placeholder="Surname" required=""formControlName="user_secondname">
+      <input type="text" name="txt" placeholder="Adress" required=""formControlName="user_adresse">
+      <input type="email" name="email" placeholder="Email" required="" formControlName="user_email">
+      <input type="number" name="txt" placeholder="Zip Code" required=""formControlName="user_zipcode">
+      <input type="date" id="birthday" name="birthday" required=""formControlName="user_birth">
+      <button id="btn-signup"type="submit"(click)="saveUser()" >Sign up</button>
     </form>
   </div>
 
   <div class="login">
-    <form>
+    <form [formGroup]="checkFormGroup" (ngSubmit)="callingFunction2()">
       <label for="chk" aria-hidden="true">Login</label>
-      <input type="email" name="email" placeholder="Email" required="">
-      <input type="password" name="pswd" placeholder="Password" required="">
+      <input type="email" name="email" placeholder="Email" required="" formControlName="check_email">
+      <input type="password" name="pswd" placeholder="Password" required="" formControlName="check_id">
      <a href="index.html">
-      <button id="btn-login">Login</button>
+      <button id="btn-login" type="submit"(click)="checkUser()">Login</button>
      </a>
     </form>
+    <p>{{userobj.id}}</p>
   </div>
 </div>
 </body>
