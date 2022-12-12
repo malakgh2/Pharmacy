@@ -15,6 +15,7 @@ import {UtilisateurService} from "./services/utilisateur.service";
 import {FamilleService} from "./services/famille.service";
 import {FactureService} from "./services/facture.service";
 import {HttpClientModule} from "@angular/common/http";
+import { BillComponent } from './components/bill/bill.component';
 
 
 
@@ -29,6 +30,7 @@ import {HttpClientModule} from "@angular/common/http";
     UserComponent,
     DashboardComponent,
     laboComponent,
+    BillComponent,
 
   ],
   imports: [
